@@ -1,9 +1,13 @@
 import React from 'react';
 
+import { DragDropContext } from 'react-beautiful-dnd';
+
 export function List({ children }) {
   return (
-    <div style={{ border: '1px solid gray', backgroundColor: 'gray' }}>
-      {children}
-    </div>
+    <DragDropContext>
+      <div style={{ border: '1px solid gray', backgroundColor: 'gray' }}>
+        {children}
+      </div>
+    </DragDropContext>
   );
 }
