@@ -14,7 +14,6 @@ export function ListItem({ id, index, text }) {
           <div
             style={{
               border: '1px solid black',
-              margin: '1rem',
               backgroundColor: 'white',
               display: 'flex',
               height: '50px',

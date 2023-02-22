@@ -2,9 +2,9 @@ import React from 'react';
 
 import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 
-export function List({ children }) {
+export function List({ children, handleOnDragEvent }) {
   return (
-    <DragDropContext>
+    <DragDropContext onDragEnd={handleOnDragEvent}>
       <Droppable droppableId='items'>
         {(provided) => (
           <div
@@ -12,6 +12,7 @@ export function List({ children }) {
               border: '1px solid gray',
               backgroundColor: 'gray',
               height: '100%',
+              width: '50%',
               transform: 'none',
             }}
             {...provided.droppableProps}
