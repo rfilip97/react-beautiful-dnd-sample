@@ -4,12 +4,12 @@ import { Draggable } from 'react-beautiful-dnd';
 
 export function ListItem({ id, index, text }) {
   return (
-    <Draggable key={id} index={index} draggableId={id}>
+    <Draggable index={index} draggableId={id} key={index}>
       {(provided) => (
         <div
+          ref={provided.innerRef}
           {...provided.draggableProps}
           {...provided.dragHandleProps}
-          ref={provided.innerRef}
           style={{
             border: '1px solid black',
             margin: '1rem',
@@ -21,7 +21,7 @@ export function ListItem({ id, index, text }) {
             gap: '10px',
           }}
         >
-          <div> {text}</div>
+          <div>{text}</div>
         </div>
       )}
     </Draggable>

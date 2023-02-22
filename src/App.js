@@ -5,15 +5,15 @@ import { ListItem } from './components/list-item'
 
 function App() {
   const items = [
-    { id: 1, text: 'First option'},
-    { id: 2, text: 'Second option'},
-    { id: 4, text: 'Fourth option'}
+    { id: '1', text: 'First option'},
+    { id: '2', text: 'Second option'},
+    { id: '4', text: 'Fourth option'}
   ]
 
   return (
     <div className="App">
       <List>
-        {items.map((item, index) => <ListItem id={item.id} index={index} text={item.text}/>)}
+        {items.map((item, index) => <ListItem key={item.id} id={item.id} index={index} text={item.text}/>)}
       </List>
 
     </div>
