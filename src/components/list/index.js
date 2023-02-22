@@ -1,13 +1,21 @@
 import React from 'react';
 
-import { DragDropContext } from 'react-beautiful-dnd';
+import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 
 export function List({ children }) {
   return (
     <DragDropContext>
-      <div style={{ border: '1px solid gray', backgroundColor: 'gray' }}>
-        {children}
-      </div>
+      <Droppable droppableId='listContainer'>
+        {(provided) => (
+          <div
+            style={{ border: '1px solid gray', backgroundColor: 'gray' }}
+            {...provided.droppableProps}
+            ref={provided.innerRef}
+          >
+            {children}
+          </div>
+        )}
+      </Droppable>
     </DragDropContext>
   );
 }
