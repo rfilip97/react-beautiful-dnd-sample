@@ -10,18 +10,21 @@ export function ListItem({ id, index, text }) {
           ref={provided.innerRef}
           {...provided.draggableProps}
           {...provided.dragHandleProps}
-          style={{
-            border: '1px solid black',
-            margin: '1rem',
-            backgroundColor: 'white',
-            display: 'flex',
-            height: '50px',
-            justifyContent: 'center',
-            alignItems: 'center',
-            gap: '10px',
-          }}
         >
-          <div>{text}</div>
+          <div
+            style={{
+              border: '1px solid black',
+              margin: '1rem',
+              backgroundColor: 'white',
+              display: 'flex',
+              height: '50px',
+              justifyContent: 'center',
+              alignItems: 'center',
+              gap: '10px',
+            }}
+          >
+            {text}
+          </div>
         </div>
       )}
     </Draggable>
