@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <List>
-        {items.map((item) => <ListItem id={item.id} text={item.text}/>)}
+        {items.map((item, index) => <ListItem id={item.id} index={index} text={item.text}/>)}
       </List>
 
     </div>
