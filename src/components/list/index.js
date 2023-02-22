@@ -13,6 +13,7 @@ export function List({ children }) {
             ref={provided.innerRef}
           >
             {children}
+            {provided.placeholder}
           </div>
         )}
       </Droppable>
